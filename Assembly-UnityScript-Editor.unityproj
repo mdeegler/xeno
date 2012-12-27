@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{A93FEC15-477F-51A2-FEDE-4BDF2A96347E}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript-Editor</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\PatrolPointEditor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\PatrolRouteConnector.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\PatrolRouteEditor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\ReplacePrefabInstances.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\SampleAnimationOnSelected.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Editor\UseOnlyUnlitShaders.js" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Depth.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Rain.shader" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\RealtimeReflectionInWaterFlow.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Cursor.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleAdditiveBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\AdditiveBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\RealtimeReflectionReplacement.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Additive.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundArbitrary.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\HeightDepthOfField.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\BlurPassesForDof.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ScreenRefract.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\RainSplash.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\Fallback.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Multiply.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Blend.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\HeightFogBeforeTransparent.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\CharacterSelfIlluminationReflective.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\ColoredNoise.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\InterlacePatternBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\PlanarRealtimeReflection.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
+     <None Include="Assets\Shaders\Particle Add.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\EnemySelfIlluminationReflective.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\AngryInclude.cginc" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\MobileBloom.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleMultiply.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleAdditive.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\3rdParty\NGUI\ReadMe.txt" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (HardClip).shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored Overlay.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Other\English.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\AlphaCutoutCheapFallback.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed).shader" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\LaserScope.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\SuperSimpleSelfIllumination.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleBlend.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\InterlacePatternAdditive.shader" />
+     <None Include="Assets\3rdParty\standardlib\TerrainToolkit\Read me.txt" />
+ <Reference Include="NGUI">
+ <HintPath>Assets\3rdParty\NGUI\DLLs\NGUI.dll</HintPath>
+ </Reference>
+ <Reference Include="NGUI_Editor">
+ <HintPath>Assets\3rdParty\NGUI\DLLs\Editor\NGUI_Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Reduced">
+ <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="JsonFx.Json">
+ <HintPath>Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Graphs">
+ <HintPath>C:\Program Files (x86)\Unity\Editor\Data\Managed\UnityEditor.Graphs.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp.csproj">
+      <Project>{38353C3D-22D7-4A6F-2A0D-116472EFBA9C}</Project>      <Name>Assembly-CSharp</Name>    </ProjectReference>
+    <ProjectReference Include="Assembly-UnityScript.unityproj">
+      <Project>{7C1B940C-BC9B-DDF9-0596-B784B450F4BC}</Project>      <Name>Assembly-UnityScript</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{7C1B940C-BC9B-DDF9-0596-B784B450F4BC}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-UnityScript</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_WEBPLAYER;WEBPLUG;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_MOVIES;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;ENABLE_DUCK_TYPING;UNITY_4_0_0;UNITY_4_0;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\EffectSequencer.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ElectricShockwave.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ExplosionControl.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ExplosionLine.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ExplosionTestCage.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ExplosionTrail.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\MuzzleFlashAnimate.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Explosions\Scripts\ScaleAndDestroyRefractSphere.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\AI.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\AttackMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\BuzzerKamikazeControllerAndAi.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\DisableOutsideRadius.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\MechAttackMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\PatrolMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\PatrolPoint.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\PatrolRoute.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\SpiderAttackMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\SpiderReturnMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\AI\SwarmAI.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\FanRotate.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\FootstepHandler.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\MechAnimation.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\MechAnimationTest.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\PlayerAnimation.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\SpiderAnimation.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\SpiderAnimationTest.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Animation\conveyorBelt.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\BrokenScreen.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\ColoredNoise.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\DeactivatorOnLowQuality.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\GlowChange.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\GlowPlane.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\GlowPlaneAngleFade.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\HeightDepthOfField.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\LaserScope.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\MobileBloom.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\MoodBox.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\MoodBoxData.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\MoodBoxManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\PostEffects.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\QualityManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\RenderFogPlane.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\SelfIlluminationBlink.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\ShaderDatabase.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Fx\WorldSpaceSpecular.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Managers\MaterialImpactManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Managers\Spawner.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Managers\TextAdventureManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\EndOfLevel.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\PlaySoundOnTrigger.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\ReBirth.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\ShowFps.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\SimpleRotate.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Misc\StaticFollower.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\DestroyObject.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\EmitParticles.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\EnemyArea.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\Lock.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\LockedThing.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\PlayAnimation.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\PlayAnimationAndBack.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\PlaySound.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\PlaySoundAndBack.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\SetCheckpoint.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\ShiftUV.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\SignalSender.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\SpawnAtCheckpoint.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\SpawnMultipleObjects.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\SpawnObject.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\TerminalHack.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\TriggerOnMouse.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\TriggerOnMouseOrJoystick.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\TriggerOnPresence.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Modules\TriggerOnTag.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\CameraControl.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\FreeMovementMotor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\HoverMovementMotor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\Joystick.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\KamikazeMovementMotor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\MechMovementMotor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\MovementMotor.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Movement\PlayerMoveController.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Rain\RainBox.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Rain\RainManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Rain\RainsplashBox.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Rain\RainsplashManager.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\AutoFire.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\CopyRotation.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\Health.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\HealthFlash.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\PerFrameRaycast.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\SeekerBullet.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\SimpleBullet.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\SlowBulletFire.js" />
+     <Compile Include="Assets\3rdParty\angrybotslib\Scripts\Weapons\SlowBulletFireWithNoise.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\CharacterCamera.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\CharacterControl.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\CollisionParticleEffect.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\CollisionSoundEffect.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\Foot.js" />
+     <Compile Include="Assets\3rdParty\monstercave\Monstergame\character1\Scripts\OrbitCamera.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Character Controllers\Sources\Scripts\CharacterMotor.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Character Controllers\Sources\Scripts\FPSInputController.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Character Controllers\Sources\Scripts\PlatformInputController.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonCamera.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Character Controllers\Sources\Scripts\ThirdPersonController.js" />
+     <Compile Include="Assets\3rdParty\standardlib\Standard Assets\Particles\Legacy Particles\TimedObjectDestructor.js" />
+     <Compile Include="Assets\3rdParty\standardlib\TerrainToolkit\TerrainToolkitEnums.js" />
+     <Compile Include="Assets\scriptsHulk\obsolete\ANotes.js" />
+     <Compile Include="Assets\scriptsHulk\obsolete\CharacterMovementJS.js" />
+     <Compile Include="Assets\scriptsHulk\obsolete\PlayerHeroVars.js" />
+     <Compile Include="Assets\scriptsHulk\obsolete\TouchManager.js" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Depth.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Rain.shader" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh2.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\RealtimeReflectionInWaterFlow.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Cursor.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo20.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo14.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleAdditiveBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\AdditiveBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\RealtimeReflectionReplacement.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Additive.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundArbitrary.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Masked Colored.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundSelfIllumination.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme_upgrading.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Wooden\Arimo18.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\DotNetZip\License.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\HeightDepthOfField.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\BlurPassesForDof.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Particles\Sources\Shaders\Particle Alpha Blend (Queue +100).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ScreenRefract.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\RainSplash.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Multiply.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\Fallback.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\SciFi\SciFi Font - Header.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Multiply.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Skyboxes\_skybox info.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\Blend.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (AlphaClip).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\HeightFogBeforeTransparent.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\CharacterSelfIlluminationReflective.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\DiffuseAlwaysVisible.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Fantasy\Fantasy Font - Normal.txt" />
+     <None Include="Assets\AstarPathfindingProject\Editor\EditorAssets\Materials\Navmesh.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\ColoredNoise.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Refractive\Refractive Font - Normal.txt" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\dependencies.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\InterlacePatternBlend.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\PlanarRealtimeReflection.shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\_Example Scenes.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\ReflectiveBackgroundPlanar.shader" />
+     <None Include="Assets\Shaders\Particle Add.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\EnemySelfIlluminationReflective.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\AngryInclude.cginc" />
+     <None Include="Assets\3rdParty\angrybotslib\Resources\MobileBloom.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleMultiply.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleAdditive.shader" />
+     <None Include="Assets\3rdParty\standardlib\Standard Assets\Water (Basic)\Sources\Shaders\FX-Water Simple.shader" />
+     <None Include="Assets\3rdParty\NGUI\ReadMe.txt" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (HardClip).shader" />
+     <None Include="Assets\AstarPathfindingProject\ExampleScenes\Materials\Projector Light.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored Overlay.shader" />
+     <None Include="Assets\AstarPathfindingProject\Readme.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Other\English.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\AlphaCutoutCheapFallback.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (Packed).shader" />
+     <None Include="Assets\AstarPathfindingProject\link.xml" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\LaserScope.shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\BackgroundAndCharacters\SuperSimpleSelfIllumination.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\License.txt" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Additive Colored.shader" />
+     <None Include="Assets\AstarPathfindingProject\Plugins\JsonFx\Readme.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\Refractive\Refractive Font - Header.txt" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Shaders\Refractive.shader" />
+     <None Include="Assets\3rdParty\NGUI\Examples\Atlases\SciFi\SciFi Font - Normal.txt" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\ParticleBlend.shader" />
+     <None Include="Assets\3rdParty\NGUI\Resources\Shaders\Unlit - Transparent Colored (SoftClip).shader" />
+     <None Include="Assets\3rdParty\angrybotslib\Shaders\Fx\InterlacePatternAdditive.shader" />
+     <None Include="Assets\3rdParty\standardlib\TerrainToolkit\Read me.txt" />
+ <Reference Include="NGUI">
+ <HintPath>Assets\3rdParty\NGUI\DLLs\NGUI.dll</HintPath>
+ </Reference>
+ <Reference Include="Ionic.Zip.Reduced">
+ <HintPath>Assets\AstarPathfindingProject\Plugins\DotNetZip\Ionic.Zip.Reduced.dll</HintPath>
+ </Reference>
+ <Reference Include="JsonFx.Json">
+ <HintPath>Assets\AstarPathfindingProject\Plugins\JsonFx\JsonFx.Json.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>

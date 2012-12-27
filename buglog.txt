@@ -1,0 +1,27 @@
+*** xenomarine open issues ***
+
+highlight targets in red
+make targets single clickable
+test toonshader
+spawn correct number of aliens each round
+max flame range
+rotate flame
+add damage (chance for marines to survive)
+add to-hit (chance for marines to miss)
+add loose condition logic
+enable flame target
+add win condition logic
+enable overwatch
+add doors
+add background music
+add sound effects (door, walking, flame, alien attack, dying)
+eliminate warnings
+
+*** resolved ***
+[12.26.12]
+bug with dead units crashing pathing
+aliens should die with flame
+dead units should not be shootable
+aliens should not spawn with circle
+recompute moves after shooting (i should have less move targets)
+lighting

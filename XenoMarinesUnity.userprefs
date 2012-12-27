@@ -1,0 +1,31 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scriptsHulk\Marine\MarineData.cs">
+    <Files>
+      <File FileName="Assets\scriptsHulk\TouchManagerCS.cs" Line="169" Column="7" />
+      <File FileName="Assets\scriptsHulk\FlamerGun.cs" Line="1" Column="1" />
+      <File FileName="Assets\scriptsHulk\TurnManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\scriptsHulk\AlienData.cs" Line="29" Column="28" />
+      <File FileName="Assets\scriptsHulk\TileObject.cs" Line="60" Column="1" />
+      <File FileName="Assets\scriptsHulk\TilesManager.cs" Line="44" Column="14" />
+      <File FileName="Assets\scriptsHulk\Marine\MarineData.cs" Line="62" Column="60" />
+      <File FileName="Assets\scriptsHulk\Marine\PlayerHeroVarsCS.cs" Line="17" Column="14" />
+      <File FileName="Assets\scriptsHulk\AlienManager.cs" Line="69" Column="52" />
+      <File FileName="Assets\AstarPathfindingProject\Core\AstarPath.cs" Line="549" Column="1" />
+      <File FileName="c:\Software Development\UnityProgects\XenoMarinesUnity\Assets\AstarPathfindingProject\Core\AI\Seeker.cs" Line="343" Column="57" />
+      <File FileName="Assets\scriptsHulk\Marine\MarineManager.cs" Line="108" Column="39" />
+      <File FileName="Assets\scriptsHulk\XenoWeapon.cs" Line="4" Column="46" />
+      <File FileName="Assets\scriptsHulk\GUIManager.cs" Line="85" Column="1" />
+      <File FileName="Assets\scriptsHulk\CharacterMovement.cs" Line="1" Column="1" />
+      <File FileName="Assets\scriptsHulk\Marine\AstarAI.cs" Line="71" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint enabled="false" file="C:\Software Development\UnityProgects\XenoMarinesUnity\Assets\scriptsHulk\AlienManager.cs" line="41" />
+      <Breakpoint enabled="false" file="C:\Software Development\UnityProgects\XenoMarinesUnity\Assets\scriptsHulk\TileObject.cs" line="60" />
+      <Breakpoint enabled="false" file="C:\Software Development\UnityProgects\XenoMarinesUnity\Assets\scriptsHulk\AlienData.cs" line="31" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

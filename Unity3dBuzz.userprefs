@@ -1,0 +1,45 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scriptsHulk\GUIManager.cs">
+    <Files>
+      <File FileName="Assets\scriptsHulk\Marine\MarineData.cs" Line="91" Column="36" />
+      <File FileName="Assets\scriptsHulk\Marine\ThirdPersonMMOCamera.cs" Line="52" Column="16" />
+      <File FileName="Assets\scriptsHulk\Marine\AstarAI.cs" Line="194" Column="75" />
+      <File FileName="Assets\scriptsHulk\Marine\MarineManager.cs" Line="46" Column="2" />
+      <File FileName="Assets\scriptsHulk\AlienManager.cs" Line="120" Column="1" />
+      <File FileName="Assets\scriptsHulk\TouchManagerCS.cs" Line="108" Column="80" />
+      <File FileName="Assets\scriptsHulk\TurnManager.cs" Line="29" Column="44" />
+      <File FileName="Assets\scriptsHulk\AlienData.cs" Line="133" Column="51" />
+      <File FileName="Assets\scriptsHulk\TilesManager.cs" Line="120" Column="30" />
+      <File FileName="Assets\scriptsHulk\GUIManager.cs" Line="99" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="Assembly-CSharp" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="scriptsHulk" expanded="True">
+                <Node name="GUIManager.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="ClassPad">
+        <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="C:\Software Development\UnityProgects\Unity3dBuzz\Assets\scriptsHulk\Marine\MarineData.cs" line="92" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches>
+    <Watch file="Assets\scriptsHulk\Marine\PlayerHeroVarsCS.cs" line="42" offsetX="835" offsetY="805" expression="position" liveUpdate="False" />
+    <Watch file="Assets\scriptsHulk\Marine\PlayerHeroVarsCS.cs" line="42" offsetX="867" offsetY="788" expression="position" liveUpdate="False" />
+  </MonoDevelop.Ide.DebuggingService.PinnedWatches>
+</Properties>
