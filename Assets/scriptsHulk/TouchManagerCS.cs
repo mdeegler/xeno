@@ -39,19 +39,14 @@ public class TouchManagerCS : MonoBehaviour {
 	
 	  RaycastHit hit;
 	  Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-	   //Ray ray = masterCamera.ScreenPointToRay(Input.mousePosition);
-	  
-//	  if(Input.GetAxis("Mouse X")!=0 || Input.GetAxis("Mouse Y") != 0) {
-//	  	lastMouseMove = Input.mousePosition;
-//		Debug.Log("mouse is moved:"+lastMouseMove);
-//	  }
+
 #if !UNITY_IPHONE
 	  if(Input.GetMouseButtonUp(0)) {
 #else
 	  if(Input.touchCount == 1 && Input.GetTouch(0).tapCount > 1) {
 #endif
 	  	if(Physics.Raycast(ray, out hit)) {
-	  	  Debug.Log("rayhit...");
+	  	  //Debug.Log("rayhit...");
 	  	  if(hit.transform.gameObject==null) 
 	  	  	return; //user doesn't click anything
 	  	  	
@@ -159,8 +154,11 @@ public class TouchManagerCS : MonoBehaviour {
 		    Debug.Log("move click "+hit.point);
 			Debug.Log("total distance!!!!! "+Vector3.Distance (hit.point, lastGameObj.transform.position));
 			TileObject tcomponent = hit.transform.gameObject.GetComponent<TileObject>();
-			if(!tcomponent.selected)
+			if(!tcomponent.selected) {
+				if(lastGameObj.GetComponent<MarineData>().currentMoves < 1)
+					GetComponentInChildren<GUIManager>().StatusMessageText = "No moves left. Try selecting another marine or end turn.";
 				return activate; // not a valid spot to move to
+			}
  		    AstarAI aiMove = lastGameObj.GetComponent<AstarAI>();
 		    aiMove.setTargetPosition(hit.transform.position);
 			

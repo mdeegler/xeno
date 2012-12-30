@@ -53,14 +53,18 @@ public class MarineData : PlayerHeroVarsCS {
 	}
 	
 	void OnShootAlien(GameObject target) {
-		if(currentMoves < 1)
+		if(currentMoves < 1) {
+			MarineManager.Instance.guiManager.StatusMessageText = "No actions left";
 			return;
+		}
 		if(weapon.FireWeapon()) {
 			StartCoroutine(ShootAlien(target));
 			currentMoves--;
 			GameObject tiles = GameObject.Find("Tiles");
 			tiles.GetComponent<TilesManager>().clearSelectedTiles();
 		    tiles.GetComponent<TilesManager>().showValidMoves(gameObject, this);
+		} else if(xenoWeaponType == XenoWeapon.DamageTypes.GUN) {
+			MarineManager.Instance.guiManager.StatusMessageText = "Out of ammo. You should reload!";
 		}
 	}
 	

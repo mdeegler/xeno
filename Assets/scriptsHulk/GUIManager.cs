@@ -3,7 +3,6 @@ using System.Collections;
 
 public class GUIManager : MonoBehaviour {
 	public Texture[] buttonIcons;
-	
 	private const int BULLET = 0;
 	private const int ENDTURN = 1;
 	private const int ENERGY = 2;
@@ -16,10 +15,33 @@ public class GUIManager : MonoBehaviour {
 	
 	private const int BUTTON_WIDTH = 76;
 	private const int BUTTON_HEIGHT = 50;
+	
+	private string statusMessageText = "Airlock Breached. Xenos Detected.";
+	private Rect messageTextPos;
+	private GUIStyle messageTextStyle;
+	private Color messageTextColor1;
+	private Color messageTextColor2;
+	private float fadeoutRate=0.1f;
+	
+	public string StatusMessageText { 
+		set {
+			statusMessageText =  value;
+			messageTextColor1 = Color.white;
+			messageTextColor2 = Color.gray;
+		}
+		
+	}
+			
 
 	// Use this for initialization
 	void Start () {
-	
+		messageTextPos =  new Rect (Screen.width/2 -100 , 20 , 200 ,30);
+		messageTextStyle = new GUIStyle();
+		messageTextStyle.alignment = TextAnchor.MiddleCenter;
+		messageTextStyle.fontSize = 20;
+		
+		
+		//StatusMessageText = "Airlock Breached. Xenos Detected.";
 	}
 	
 	// Update is called once per frame
@@ -30,35 +52,38 @@ public class GUIManager : MonoBehaviour {
 	void OnGUI () {
 		
 		string turnButtonText = "Aliens Moving...";
+		
+		// display action buttons only during marines turn
 		if(TurnManager.Instance.currentTurn == TurnManager.TurnTypes.MARINE){
 			turnButtonText = "End Turn";	
-		} 
-		
-		// end turn button
-		GUIContent content = new GUIContent(turnButtonText, buttonIcons[ENDTURN]);
-		GUIStyle style = GUI.skin.button;
-		style.imagePosition = ImagePosition.ImageAbove;
+
+			// end turn button
+			GUIContent content = new GUIContent(turnButtonText, buttonIcons[ENDTURN]);
+			GUIStyle style = GUI.skin.button;
+			style.imagePosition = ImagePosition.ImageAbove;
+				
+			if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH*2+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+				print ("You clicked the end turn button!");
+				StatusMessageText = "Xeno's moving...";
+				TurnManager.Instance.NextTurn();
+			}
 			
-		if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH*2+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
-			print ("You clicked the end turn button!");
-			TurnManager.Instance.NextTurn();
-		}
-		
-		// reload button
-		content.text = "Reload";
-		content.image = buttonIcons[RELOAD];
-		if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
-			MarineManager.Instance.CurrentMarineReloadsWeapon();	
-		}
-		
-		// target area button
-		
-		
-		// overwatch button
-		content.text = "Overwatch";
-		content.image = buttonIcons[OVERWATCH];
-		if (GUI.Button (new Rect (Screen.width/2 +100 ,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+			// reload button
+			content.text = "Reload";
+			content.image = buttonIcons[RELOAD];
+			if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+				MarineManager.Instance.CurrentMarineReloadsWeapon();	
+			}
 			
+			// target area button
+			
+			
+			// overwatch button
+			content.text = "Overwatch";
+			content.image = buttonIcons[OVERWATCH];
+			if (GUI.Button (new Rect (Screen.width/2 +100 ,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+				StatusMessageText = "Feature coming soon! Hang in there marine!";	
+			}
 		}
 		
 		// marines
@@ -72,7 +97,25 @@ public class GUIManager : MonoBehaviour {
 			index++;
 		}
 		
+		DisplayStatusMessage();
+		
 	
+	}
+	
+	/**
+	 * This text will slowly fade out. Disable once it is invisible
+	 **/
+	private void DisplayStatusMessage() {
+		if(statusMessageText.Equals(""))
+			return;
+		
+		messageTextColor1.a = messageTextColor1.a - fadeoutRate * Time.deltaTime;
+		messageTextColor2.a = messageTextColor2.a - fadeoutRate * Time.deltaTime;
+		if(messageTextColor1.a <= 0) {
+			statusMessageText = "";
+			return;
+		}
+		DrawOutlinedText(messageTextPos, statusMessageText, messageTextStyle, messageTextColor2, messageTextColor1);	
 	}
 	
 	private void MarineGUI(float locX, float locY, MarineData data) {
@@ -112,5 +155,23 @@ public class GUIManager : MonoBehaviour {
 			
 			GUI.DrawTexture(new Rect(locX, locY-3-(5*index), 10, 4), tex, ScaleMode.StretchToFill, true);	
 		}
+	}
+	
+	public static void DrawOutlinedText(Rect position, string text, GUIStyle style, Color outColor, Color inColor) {
+	    GUIStyle backupStyle = style;
+	    style.normal.textColor = outColor;
+	    position.x--;
+	    GUI.Label(position, text, style);
+	    position.x +=2;
+	    GUI.Label(position, text, style);
+	    position.x--;
+	    position.y--;
+	    GUI.Label(position, text, style);
+	    position.y +=2;
+	    GUI.Label(position, text, style);
+	    position.y--;
+	    style.normal.textColor = inColor;
+	    GUI.Label(position, text, style);
+	    style = backupStyle;
 	}
 }

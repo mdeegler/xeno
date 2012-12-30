@@ -50,6 +50,9 @@ public class TilesManager : MonoBehaviour {
 		CheckTile(currentTile);
 	}
 	
+	/**
+	 * performs a A* path check to this target tile
+	 **/
 	private void CheckTile(int tileIndex) {
 		Transform tileTransform = tiles.transform.GetChild(tileIndex);
 		// do a raw check to see if its anywhere in the ballpark
@@ -69,7 +72,6 @@ public class TilesManager : MonoBehaviour {
 	}
 	
 	public void OnPathChecked (Path p) {
-		
 		//Debug.Log ("Yey, we got a path back. Did it have an error? "+p.error);
 		if (!p.error) {
 			if(p != null && p.vectorPath.Length <= selectedUnitData.currentMoves+1) { 
@@ -77,7 +79,8 @@ public class TilesManager : MonoBehaviour {
 				TileObject tileObj = tileTransform.gameObject.GetComponent<TileObject>();
 				//float dist = Vector3.Distance (tileTransform.position, selectedUnit.transform.position);
 		       // Debug.Log ("Distance = "+dist);
-				tileObj.selected=true;
+				if(tileObj.GetUnit() == null) // only highlight this tile if there is no one standing here
+					tileObj.selected=true;
 			}
 		}
 		currentTile ++;
@@ -154,6 +157,9 @@ public class TilesManager : MonoBehaviour {
 		return null;
 	}
 	
+	/**
+	 * return a list of tiles that touch this tile
+	 **/
 	public ArrayList FindNearbyTiles(TileObject tile) {
 		ArrayList alist = new ArrayList();
 		foreach(Transform child in tiles.transform){

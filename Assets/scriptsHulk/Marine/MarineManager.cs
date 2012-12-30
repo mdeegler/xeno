@@ -2,6 +2,8 @@ using UnityEngine;
 using System.Collections;
 
 public class MarineManager : MonoBehaviour {
+	public GUIManager guiManager;
+	
 	private static MarineManager _instance = new MarineManager();
 
 	public static MarineManager Instance {
@@ -28,7 +30,7 @@ public class MarineManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+		guiManager = GetComponentInChildren<GUIManager>();
 	}
 	
 	// Update is called once per frame
@@ -55,6 +57,7 @@ public class MarineManager : MonoBehaviour {
 		PlayerHeroVarsCS data = firstMarine.GetComponent<PlayerHeroVarsCS>();
 			
 		SelectMarine(firstMarine.gameObject, data);
+		GetComponentInChildren<GUIManager>().StatusMessageText = "Airlock Breached. Xenos Detected.";
 	}
 	
 	public void SelectMarine(GameObject marine, PlayerHeroVarsCS marineData) {
@@ -66,7 +69,7 @@ public class MarineManager : MonoBehaviour {
 		touch.SetActiveCamera(marineData.unitCamera);
 		marineData.gameObject.GetComponent<ThirdPersonMMOCamera>().Reset();
 		unselectAllMarines(marine);
-		
+		GetComponentInChildren<GUIManager>().StatusMessageText = "";
 		touch.showValidMoves(marine, marineData);	
 	}
 		
@@ -126,6 +129,7 @@ public class MarineManager : MonoBehaviour {
 	        } else {
 	            // there is something obstructing the view
 				Debug.Log("i CANT see my target!");
+				GetComponentInChildren<GUIManager>().StatusMessageText = "No line of sight.";
 				return false;
 	        }
 
