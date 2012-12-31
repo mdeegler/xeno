@@ -22,6 +22,7 @@ public class GUIManager : MonoBehaviour {
 	private Color messageTextColor1;
 	private Color messageTextColor2;
 	private float fadeoutRate=0.1f;
+	private int actionButtonOffset=400;
 	
 	public string StatusMessageText { 
 		set {
@@ -62,16 +63,16 @@ public class GUIManager : MonoBehaviour {
 			GUIStyle style = GUI.skin.button;
 			style.imagePosition = ImagePosition.ImageAbove;
 				
-			if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH*2+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+			if (GUI.Button (new Rect (Screen.width-actionButtonOffset + BUTTON_WIDTH*2+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
 				print ("You clicked the end turn button!");
-				StatusMessageText = "Xeno's moving...";
+				StatusMessageText = "Xenos moving...";
 				TurnManager.Instance.NextTurn();
 			}
 			
 			// reload button
 			content.text = "Reload";
 			content.image = buttonIcons[RELOAD];
-			if (GUI.Button (new Rect (Screen.width/2 + BUTTON_WIDTH+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+			if (GUI.Button (new Rect (Screen.width-actionButtonOffset + BUTTON_WIDTH+100,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
 				MarineManager.Instance.CurrentMarineReloadsWeapon();	
 			}
 			
@@ -81,14 +82,14 @@ public class GUIManager : MonoBehaviour {
 			// overwatch button
 			content.text = "Overwatch";
 			content.image = buttonIcons[OVERWATCH];
-			if (GUI.Button (new Rect (Screen.width/2 +100 ,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
+			if (GUI.Button (new Rect (Screen.width-actionButtonOffset +100 ,Screen.height - 52,BUTTON_WIDTH,BUTTON_HEIGHT), content, style)) {
 				StatusMessageText = "Feature coming soon! Hang in there marine!";	
 			}
 		}
 		
 		// marines
 		MarineData data;
-		float locX = Screen.width/2 - 500;
+		float locX = 30;
 		float locY = Screen.height - BUTTON_HEIGHT-20-2;
 		int index = 0;
 		foreach(Transform marineTrans in MarineManager.Instance.Marines.transform) {

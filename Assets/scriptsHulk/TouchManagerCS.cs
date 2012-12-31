@@ -46,7 +46,10 @@ public class TouchManagerCS : MonoBehaviour {
 	  if(Input.touchCount == 1 && Input.GetTouch(0).tapCount > 1) {
 #endif
 	  	if(Physics.Raycast(ray, out hit)) {
-	  	  //Debug.Log("rayhit...");
+		//int layer1 = 13;
+		//int nonDoorMask = ~(1 << layer1);
+		//if(Physics.Raycast(ray, out hit,  Mathf.Infinity, nonDoorMask)) {
+	  	  Debug.Log("rayhit...");
 	  	  if(hit.transform.gameObject==null) 
 	  	  	return; //user doesn't click anything
 	  	  	
@@ -94,7 +97,6 @@ public class TouchManagerCS : MonoBehaviour {
 		  	adata.Selected=true;
 			lastAlienTarget = alien; 
 		} else if (lastAlienTarget != null){
-			//hit.transform.gameObject.BroadcastMessage("Selected", false);
 			lastAlienTarget.GetComponent<PlayerHeroVarsCS>().Selected=false;
 			lastAlienTarget = null;
 		}
@@ -190,45 +192,5 @@ public class TouchManagerCS : MonoBehaviour {
 		
 		Debug.Log("Camera updated to be "+newActiveCamera.GetInstanceID());
 	}
-
-
-
-/**
-function OnGUI () {
-
-    var evt = Event.current;
-
-    if (evt.isMouse && Input.GetMouseButton (0))
-
-    {
-
-       // Send a ray to collide with the plane
-
-       var ray = Camera.main.ScreenPointToRay (Input.mousePosition);
-       var hit: RaycastHit;
-       if (collider.Raycast (ray, hit, Mathf.Infinity)) {
-
-         // Find the u,v coordinate of the Texture
-
-         var uv: Vector2;
-
-         uv.x = (hit.point.x - hit.collider.bounds.min.x) / hit.collider.bounds.size.x;
-
-         uv.y = (hit.point.y - hit.collider.bounds.min.y) / hit.collider.bounds.size.y;
-
-         // Paint it red
-
-         var tex: Texture2D;
-         tex = hit.transform.gameObject.renderer.sharedMaterial.mainTexture;
-
-         tex.SetPixel ((uv.x * tex.width), (uv.y * tex.height), Color.red);
-
-         tex.Apply ();
-
-       }
-
-    }
-
-}**/
 	
 }

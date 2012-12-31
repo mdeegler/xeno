@@ -1,0 +1,19 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scriptsHulk\Marine\MarineData.cs">
+    <Files>
+      <File FileName="Assets\scriptsHulk\TouchManagerCS.cs" Line="109" Column="46" />
+      <File FileName="Assets\scriptsHulk\Marine\AstarAI.cs" Line="39" Column="14" />
+      <File FileName="Assets\scriptsHulk\Marine\MarineManager.cs" Line="33" Column="13" />
+      <File FileName="Assets\scriptsHulk\TilesManager.cs" Line="82" Column="62" />
+      <File FileName="Assets\scriptsHulk\TileObject.cs" Line="112" Column="20" />
+      <File FileName="Assets\scriptsHulk\GUIManager.cs" Line="67" Column="5" />
+      <File FileName="Assets\scriptsHulk\Marine\MarineData.cs" Line="67" Column="83" />
+      <File FileName="Assets\scriptsHulk\XenoWeapon.cs" Line="50" Column="4" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

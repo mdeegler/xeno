@@ -13,6 +13,10 @@ function Awake () {
 function OnTriggerEnter (other : Collider) {
 	if (other.isTrigger)
 		return;
+		
+	// only trigger on marines and aliens
+	if(!(other.gameObject.CompareTag("Alien")) && !(other.gameObject.CompareTag("Player")))
+		return;
 	
 	var wasEmpty : boolean = (objects.Count == 0);
 	
